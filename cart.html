@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Carrinho — Ateliê de Materiais</title>
+  <meta name="description" content="Carrinho de compras — Ateliê de Materiais" />
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="page">
+  <header class="site-header">
+    <div class="container header__inner">
+      <a class="logo" href="/" aria-label="Voltar para a loja">
+        <svg width="36" height="36" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
+        <span class="logo__text">Ateliê</span>
+      </a>
+      <a class="link" href="/">Continuar comprando</a>
+    </div>
+  </header>
+
+  <main class="container cart" role="main">
+    <h1 class="section__title">Seu carrinho</h1>
+
+    <section class="cart__content">
+      <div id="cart-items" class="cart-items" aria-live="polite">
+        <!-- itens do carrinho injetados por JS -->
+      </div>
+
+      <aside class="cart-summary" aria-labelledby="summary-title">
+        <h2 id="summary-title">Resumo do pedido</h2>
+        <dl class="summary-list">
+          <div class="summary-row">
+            <dt>Subtotal</dt>
+            <dd id="summary-subtotal">R$ 0,00</dd>
+          </div>
+          <div class="summary-row">
+            <dt>Frete estimado</dt>
+            <dd id="summary-shipping">R$ 0,00</dd>
+          </div>
+          <div class="summary-row">
+            <dt>Desconto</dt>
+            <dd id="summary-discount">R$ 0,00</dd>
+          </div>
+          <div class="summary-row summary-row--total">
+            <dt>Total</dt>
+            <dd id="summary-total">R$ 0,00</dd>
+          </div>
+        </dl>
+
+        <label for="coupon" class="visually-hidden">Cupom</label>
+        <input id="coupon" class="input" placeholder="Código de cupom" />
+        <button id="apply-coupon" class="btn btn--ghost">Aplicar</button>
+
+        <button id="checkout" class="btn btn--primary">Finalizar compra</button>
+      </aside>
+    </section>
+
+    <section id="empty-state" class="cart-empty" hidden>
+      <p>Seu carrinho está vazio.</p>
+      <a class="btn btn--ghost" href="/">Ver catálogo</a>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer__inner">
+      <p>© <span id="year-2"></span> Ateliê de Materiais</p>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
