@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Ateliê de Materiais — Confecção de Joias</title>
+  <meta name="description" content="Loja de materiais para confecção de joias e bijuterias. Miçangas, fechos, fios e kits. Navegação minimalista e rápida." />
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="page">
+  <header class="site-header" role="banner">
+    <div class="container header__inner">
+      <a class="logo" href="/" aria-label="Ateliê de Materiais - Página inicial">
+        <svg width="36" height="36" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="1.5"/>
+          <path d="M7 12h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+        <span class="logo__text">Ateliê</span>
+      </a>
+
+      <nav class="nav" role="navigation" aria-label="Menu principal">
+        <ul class="nav__list">
+          <li><a href="#novidades">Novidades</a></li>
+          <li><a href="#colecoes">Coleções</a></li>
+          <li><a href="#vitrine">Inspiração</a></li>
+          <li><a href="#blog">Blog</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <form class="search" role="search" aria-label="Buscar produtos">
+          <label for="search-input" class="visually-hidden">Buscar</label>
+          <input id="search-input" class="search__input" type="search" placeholder="Buscar miçangas, fechos..." />
+        </form>
+
+        <a class="cart-link" href="cart.html" aria-label="Ver carrinho">
+          <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 3h2l.4 2M7 13h10l4-8H5.4" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span id="cart-count" class="cart-count" aria-live="polite">0</span>
+        </a>
+
+        <button class="menu-toggle" aria-expanded="false" aria-controls="mobile-menu" aria-label="Abrir menu">
+          <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <div id="mobile-menu" class="mobile-menu" hidden>
+      <ul class="mobile-menu__list">
+        <li><a href="#novidades">Novidades</a></li>
+        <li><a href="#colecoes">Coleções</a></li>
+        <li><a href="#vitrine">Inspiração</a></li>
+        <li><a href="#blog">Blog</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main class="main" id="main" role="main">
+    <!-- Hero -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container hero__inner">
+        <div class="hero__media" aria-hidden="true">
+          <!-- placeholder SVG editorial -->
+          <svg class="hero__svg" viewBox="0 0 1200 600" preserveAspectRatio="xMidYMid slice" role="img">
+            <rect width="1200" height="600" fill="var(--color-surface)"></rect>
+            <g fill="none" stroke="var(--color-muted)" stroke-width="2">
+              <circle cx="200" cy="300" r="80"></circle>
+              <circle cx="420" cy="260" r="60"></circle>
+              <circle cx="760" cy="320" r="100"></circle>
+            </g>
+          </svg>
+        </div>
+
+        <div class="hero__content">
+          <h1 id="hero-title" class="hero__title">Materiais que inspiram suas criações</h1>
+          <p class="hero__subtitle">Miçangas, fechos, fios e kits selecionados para designers e hobbistas.</p>
+          <div class="hero__ctas">
+            <a class="btn btn--primary" href="#catalogo">Comprar agora</a>
+            <a class="btn btn--ghost" href="#catalogo">Ver catálogo</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Destaques / Carrossel editorial -->
+    <section id="novidades" class="section container">
+      <h2 class="section__title">Destaques</h2>
+
+      <div class="carousel carousel--editorial" aria-roledescription="carousel" aria-label="Campanhas">
+        <button class="carousel__nav carousel__nav--prev" aria-label="Slide anterior">&lt;</button>
+        <div class="carousel__track" id="editorial-track">
+          <article class="carousel__slide" tabindex="0" aria-label="Campanha 1">
+            <div class="slide__media" aria-hidden="true">
+              <svg viewBox="0 0 800 400" class="slide__svg"><rect width="800" height="400" fill="var(--color-surface)"/></svg>
+            </div>
+            <div class="slide__content">
+              <h3>Nova coleção de miçangas</h3>
+              <p>Pequenas peças, grandes possibilidades.</p>
+              <a class="btn btn--primary" href="#catalogo">Explorar</a>
+            </div>
+          </article>
+
+          <article class="carousel__slide" tabindex="0" aria-label="Campanha 2">
+            <div class="slide__media" aria-hidden="true">
+              <svg viewBox="0 0 800 400" class="slide__svg"><rect width="800" height="400" fill="var(--color-surface)"/></svg>
+            </div>
+            <div class="slide__content">
+              <h3>Kits para iniciantes</h3>
+              <p>Tudo que você precisa para começar a criar.</p>
+              <a class="btn btn--primary" href="#catalogo">Ver kits</a>
+            </div>
+          </article>
+
+          <article class="carousel__slide" tabindex="0" aria-label="Campanha 3">
+            <div class="slide__media" aria-hidden="true">
+              <svg viewBox="0 0 800 400" class="slide__svg"><rect width="800" height="400" fill="var(--color-surface)"/></svg>
+            </div>
+            <div class="slide__content">
+              <h3>Ofertas semanais</h3>
+              <p>Peças selecionadas com desconto.</p>
+              <a class="btn btn--primary" href="#catalogo">Aproveitar</a>
+            </div>
+          </article>
+        </div>
+        <button class="carousel__nav carousel__nav--next" aria-label="Próximo slide">&gt;</button>
+      </div>
+    </section>
+
+    <!-- Coleções -->
+    <section id="colecoes" class="section container">
+      <h2 class="section__title">Coleções por material</h2>
+      <div class="collections-grid">
+        <a class="collection-card" href="#catalogo" aria-label="Miçangas">
+          <svg class="collection-card__img" viewBox="0 0 200 120"><rect width="200" height="120" fill="var(--color-surface)"/></svg>
+          <div class="collection-card__meta">
+            <h3>Miçangas</h3>
+            <p>Variedade de cores e tamanhos</p>
+          </div>
+        </a>
+
+        <a class="collection-card" href="#catalogo" aria-label="Fechos">
+          <svg class="collection-card__img" viewBox="0 0 200 120"><rect width="200" height="120" fill="var(--color-surface)"/></svg>
+          <div class="collection-card__meta">
+            <h3>Fechos</h3>
+            <p>Modelos para todos os projetos</p>
+          </div>
+        </a>
+
+        <a class="collection-card" href="#catalogo" aria-label="Fios">
+          <svg class="collection-card__img" viewBox="0 0 200 120"><rect width="200" height="120" fill="var(--color-surface)"/></svg>
+          <div class="collection-card__meta">
+            <h3>Fios</h3>
+            <p>Fios resistentes e elegantes</p>
+          </div>
+        </a>
+
+        <a class="collection-card" href="#catalogo" aria-label="Ferramentas">
+          <svg class="collection-card__img" viewBox="0 0 200 120"><rect width="200" height="120" fill="var(--color-surface)"/></svg>
+          <div class="collection-card__meta">
+            <h3>Ferramentas</h3>
+            <p>Acessórios para montagem</p>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <!-- Catálogo / Vitrine de produtos -->
+    <section id="catalogo" class="section container">
+      <h2 class="section__title">Catálogo</h2>
+
+      <div class="catalog-controls">
+        <label class="visually-hidden" for="filter">Filtrar</label>
+        <select id="filter" class="select">
+          <option value="all">Todos</option>
+          <option value="beads">Miçangas</option>
+          <option value="findings">Fechos</option>
+          <option value="threads">Fios</option>
+        </select>
+        <div class="catalog-actions">
+          <button id="sort-btn" class="btn btn--ghost">Ordenar</button>
+        </div>
+      </div>
+
+      <div id="product-grid" class="product-grid" aria-live="polite">
+        <!-- Product cards injected by JS -->
+      </div>
+
+      <div class="load-more">
+        <button id="load-more" class="btn btn--ghost">Carregar mais</button>
+      </div>
+    </section>
+
+    <!-- Vitrine editorial / Inspiração -->
+    <section id="vitrine" class="section container">
+      <h2 class="section__title">Inspiração</h2>
+      <div class="editorial-grid">
+        <article class="editorial-card">
+          <svg class="editorial-card__img" viewBox="0 0 400 240"><rect width="400" height="240" fill="var(--color-surface)"/></svg>
+          <div class="editorial-card__body">
+            <h3>Como montar brincos statement</h3>
+            <p>Passo a passo com materiais sugeridos.</p>
+            <a class="link" href="#blog">Ler tutorial</a>
+          </div>
+        </article>
+
+        <article class="editorial-card">
+          <svg class="editorial-card__img" viewBox="0 0 400 240"><rect width="400" height="240" fill="var(--color-surface)"/></svg>
+          <div class="editorial-card__body">
+            <h3>Combinações de cores</h3>
+            <p>Paletas que valorizam suas peças.</p>
+            <a class="link" href="#blog">Ver ideias</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Depoimentos -->
+    <section class="section container">
+      <h2 class="section__title">Depoimentos</h2>
+      <div class="testimonials">
+        <blockquote class="testimonial">
+          <p>“Produtos de ótima qualidade e entrega rápida. Recomendo!”</p>
+          <cite>— Ana, designer</cite>
+        </blockquote>
+      </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="section container">
+      <h2 class="section__title">Newsletter</h2>
+      <form class="newsletter" aria-label="Inscrever na newsletter">
+        <label for="email" class="visually-hidden">Email</label>
+        <input id="email" type="email" placeholder="Seu email" required />
+        <button class="btn btn--primary">Inscrever</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer__inner">
+      <p>© <span id="year"></span> Ateliê de Materiais — Todos os direitos reservados</p>
+      <nav aria-label="Rodapé">
+        <ul class="footer__links">
+          <li><a href="#politica">Política de privacidade</a></li>
+          <li><a href="#termos">Termos</a></li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
